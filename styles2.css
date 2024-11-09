@@ -1,0 +1,133 @@
+/* Estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  #banner {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #store-products {
+    text-align: center;
+  }
+  
+  #store-products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Tres columnas por defecto */
+    gap: 20px;
+    justify-items: center;
+    justify-content: center; /* Asegura que el contenido está centrado */
+  }
+  
+  .product {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .product h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .product p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .specifications {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .specifications li {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  /* CSS Responsivo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);  /* En pantallas pequeñas, 2 columnas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products-grid {
+      grid-template-columns: 1fr;  /* En dispositivos móviles, una columna */
+    }
+  }
+  
